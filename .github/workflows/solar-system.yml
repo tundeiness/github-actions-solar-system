@@ -1,7 +1,7 @@
 name: Solar System Workflow
 
 on: 
-  # workflow_dispatch:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -18,7 +18,7 @@ jobs:
         - name: Setup NodeJS Version
           uses: actions/setup-node@v4
           with:
-            node-version: 18
+            node-version: 20
     
         - name: Install Dependencies
           run: npm install
@@ -31,4 +31,5 @@ jobs:
           with:
             name: Mocha-Test-Result
             path: test-results.xml
+
 
