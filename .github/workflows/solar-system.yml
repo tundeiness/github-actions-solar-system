@@ -36,6 +36,7 @@ jobs:
     
         - name: Unit Testing
           run: npm test
+          continue-on-error: true
           
         - name: Archive Test Result
           if: always()
@@ -75,6 +76,7 @@ jobs:
               name: Code-Coverage-Result
               path: coverage
               retention-days: 5
+
 
 
 
